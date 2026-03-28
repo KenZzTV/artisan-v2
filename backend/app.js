@@ -16,13 +16,18 @@ app.use(cors());
 /**
  * CONNEXION À LA BASE DE DONNÉES
  */
-const db = mysql.createConnection({
-    host: process.env.MYSQLHOST || 'localhost',
-    port: process.env.MYSQLPORT || 3307,
-    user: process.env.MYSQLUSER || 'root',
-    password: process.env.MYSQLPASSWORD || '',
-    database: process.env.MYSQLDATABASE || 'test'
+const db = mysql.createPool({
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
+
+module.exports = db.promise();
 
 db.connect((err) => {
     if (err) {
