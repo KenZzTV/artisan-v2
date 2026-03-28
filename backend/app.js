@@ -27,16 +27,6 @@ const db = mysql.createPool({
   queueLimit: 0
 });
 
-module.exports = db.promise();
-
-db.connect((err) => {
-    if (err) {
-        console.error('Erreur de connexion à la base de données:', err.message);
-        return;
-    }
-    console.log('Connecté à la base de données MySQL !');
-});
-
 // Middlewares standards
 app.use(logger('dev'));
 app.use(express.json());
