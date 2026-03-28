@@ -31,7 +31,7 @@ function Details() {
    * Effet pour charger les données de l'artisan au montage du composant ou quand l'ID change.
    */
   useEffect(() => {
-    fetch(`http://localhost:3000/api/artisans/${id}`)
+    fetch(`https://artisan-v2-production-3f9e.up.railway.app/api/artisans/${id}`)
       .then(res => res.json())
       .then(data => setArtisan(data))
       .catch(err => console.error("Erreur detail:", err));

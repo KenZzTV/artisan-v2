@@ -22,7 +22,7 @@ function List({ searchTerm = "" }) {
    * @async
    */
   useEffect(() => {
-    fetch('http://localhost:3000/api/artisans')
+    fetch('https://artisan-v2-production-3f9e.up.railway.app/api/artisans')
       .then(res => res.json())
       .then(data => setArtisans(data))
       .catch(err => console.error("Erreur SQL:", err));

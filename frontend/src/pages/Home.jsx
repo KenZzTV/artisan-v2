@@ -19,7 +19,7 @@ function Home() {
    * @async
    */
   useEffect(() => {
-    fetch('http://localhost:3000/api/artisans')
+    fetch('https://artisan-v2-production-3f9e.up.railway.app/api/artisans')
       .then(response => response.json())
       .then(data => {
         setArtisans(data);
