@@ -1,0 +1,113 @@
+.details-page-wrapper {
+  background-color: #fcfcfc;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.details-container {
+  display: flex;
+  max-width: 1200px;
+  width: 90%;
+  gap: 40px; /* Espace entre les deux colonnes */
+}
+
+/* --- COLONNE GAUCHE --- */
+.details-left {
+  flex: 1; /* Prend 50% de la largeur */
+}
+
+.artisan-card-header {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.artisan-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.artisan-name {
+  color: #004a77;
+  margin: 0;
+}
+
+.presentation-section h3 {
+  color: #004a77;
+  border-bottom: 2px solid #004a77;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.presentation-section p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* --- COLONNE DROITE (FORMULAIRE) --- */
+.details-right {
+  flex: 1; /* Prend les autres 50% */
+}
+
+.contact-form-container {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+}
+
+.contact-form-container h3 {
+  color: #004a77;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: inherit;
+}
+
+.btn-send {
+  background-color: #8bb369; /* Le vert de ton Figma */
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-send:hover {
+  background-color: #769a56;
+}
+
+.form-footer {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Responsive : On empile sur mobile */
+@media (max-width: 850px) {
+  .details-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,62 @@
+.home-page {
+  padding: 40px 5%;
+  background-color: #fff;
+}
+
+.main-title {
+  color: #004a77; /* Le bleu du Figma */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+/* --- Section Étapes --- */
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: #d94343; /* Rouge Figma */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.step p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  max-width: 200px;
+}
+
+/* --- Section Artisans (En ligne) --- */
+.artisans-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Pour que ça reste responsive */
+}
+
+/* On s'assure que les cartes ne sont pas trop larges pour tenir à 3 */
+.artisans-row .artisan-card {
+  flex: 1;
+  max-width: 400px; 
+  min-width: 300px;
+}

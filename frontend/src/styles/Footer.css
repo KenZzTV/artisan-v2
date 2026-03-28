@@ -1,0 +1,44 @@
+.main-footer {
+  background-color: #353c48; /* Bleu nuit sombre */
+  color: #cbd5e0;
+  padding: 40px 0 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-address {
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid #4a5568;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* On force l'alignement horizontal ici */
+.footer-links {
+  display: block; /* On repasse en block pour gérer l'alignement textuel */
+  text-align: center;
+}
+
+.footer-links a {
+  display: inline-block; /* Les liens se mettent les uns à côté des autres */
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin: 0 10px; /* Espace horizontal entre les liens */
+}
+
+.footer-links span {
+  color: #4a5568;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: white;
+}

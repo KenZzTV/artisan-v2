@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import List from './pages/List';
+import Details from './pages/Details';
+import Legal from './pages/Legal';
+import NotFound from './pages/NotFound';
 import './App.css';
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* On passe la fonction de recherche au Header */}
+      <Header onSearch={setSearchTerm} />
+      
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* On passe le mot-clé à la page Liste */}
+          <Route path="/liste-artisans" element={<List searchTerm={searchTerm} />} />
+          <Route path="/artisan/:id" element={<Details />} />
+          <Route path="/mentions-legales" element={<Legal />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+
+      <Footer />
     </div>
   );
 }
