@@ -43,7 +43,7 @@ function Details() {
    */
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:3000/api/contact', {
+    fetch('https://artisan-v2-production-3f9e.up.railway.app/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
