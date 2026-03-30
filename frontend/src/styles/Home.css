@@ -4,7 +4,7 @@
 }
 
 .main-title {
-  color: #004a77; /* Le bleu du Figma */
+  color: #004a77;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
@@ -29,7 +29,7 @@
 .circle {
   width: 60px;
   height: 60px;
-  background-color: #d94343; /* Rouge Figma */
+  background-color: #d94343;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -51,10 +51,9 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap; /* Pour que ça reste responsive */
+  flex-wrap: wrap;
 }
 
-/* On s'assure que les cartes ne sont pas trop larges pour tenir à 3 */
 .artisans-row .artisan-card {
   flex: 1;
   max-width: 400px; 

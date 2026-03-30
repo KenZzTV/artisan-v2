@@ -43,11 +43,11 @@ function Header({ onSearch }) {
         </div>
 
         {/* NAVIGATION : Prend 12 colonnes sur mobile, et 4 sur PC */}
-        <nav className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-2 flex-wrap">
-          <Link className="btn btn-sm btn-outline-primary" to="/liste-artisans?categorie=Bâtiment">Bâtiment</Link>
-          <Link className="btn btn-sm btn-outline-primary" to="/liste-artisans?categorie=Services">Services</Link>
-          <Link className="btn btn-sm btn-outline-primary" to="/liste-artisans?categorie=Fabrication">Fabrication</Link>
-          <Link className="btn btn-sm btn-outline-primary" to="/liste-artisans?categorie=Alimentation">Alimentation</Link>
+        <nav className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end gap-2 flex-wrap header-nav">
+          <Link className="nav-link-custom" to="/liste-artisans?categorie=Bâtiment">Bâtiment</Link>
+          <Link className="nav-link-custom" to="/liste-artisans?categorie=Services">Services</Link>
+          <Link className="nav-link-custom" to="/liste-artisans?categorie=Fabrication">Fabrication</Link>
+          <Link className="nav-link-custom" to="/liste-artisans?categorie=Alimentation">Alimentation</Link>
         </nav>
 
       </div>
